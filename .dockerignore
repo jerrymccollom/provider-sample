@@ -1,0 +1,9 @@
+.git
+.idea
+_output
+.cache
+.work
+.DS_Store
+.gitignore
+README.md
+
