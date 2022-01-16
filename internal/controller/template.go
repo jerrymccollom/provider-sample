@@ -17,13 +17,13 @@ limitations under the License.
 package controller
 
 import (
+	"github.com/jerrymccollom/provider-sample/mytype"
 	"k8s.io/client-go/util/workqueue"
 	ctrl "sigs.k8s.io/controller-runtime"
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
-	"github.com/jmccollom/provider-sample/internal/controller/config"
-	"github.com/jmccollom/provider-sample/internal/controller/mytype"
+	"github.com/jerrymccollom/provider-sample/internal/controller/config"
 )
 
 // Setup creates all Template controllers with the supplied logger and adds them to

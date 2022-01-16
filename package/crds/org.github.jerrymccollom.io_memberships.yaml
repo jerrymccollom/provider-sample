@@ -1,11 +1,3 @@
-  name: memberships.org.github.jerrymccollom.io
-spec:
-  group: org.github.jerrymccollom.io
-  names:
-    kind: Membership
-    listKind: MembershipList
-    plural: memberships
-    singular: membership
   scope: Cluster
   versions:
   - additionalPrinterColumns:

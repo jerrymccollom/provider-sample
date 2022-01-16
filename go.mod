@@ -1,4 +1,4 @@
-module github.com/jmccollom/provider-sample
+module github.com/jerrymccollom/provider-sample
 
 go 1.17
 

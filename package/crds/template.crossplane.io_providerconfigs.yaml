@@ -1,11 +1,3 @@
-  name: providerconfigs.template.crossplane.io
-spec:
-  group: template.crossplane.io
-  names:
-    kind: ProviderConfig
-    listKind: ProviderConfigList
-    plural: providerconfigs
-    singular: providerconfig
   scope: Cluster
   versions:
   - additionalPrinterColumns:
