@@ -9,10 +9,10 @@ build:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o ./bin/$(PROVIDER_NAME)-controller cmd/provider/main.go
 
 image:
-	docker build . -t $(ORG_NAME)/$(PROVIDER_NAME)-controller:v0.0.1 -f cluster/Dockerfile
+	docker build . -t $(ORG_NAME)/$(PROVIDER_NAME):latest -f cluster/Dockerfile
 
 image-push:
-	docker push $(ORG_NAME)/$(PROVIDER_NAME)-controller:v0.0.1
+	docker push $(ORG_NAME)/$(PROVIDER_NAME):latest
 
 run: generate
 	kubectl apply -f package/crds/ -R
