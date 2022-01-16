@@ -5,7 +5,7 @@ metadata:
   name: example-provider-secret
 type: Opaque
 data:
-  credentials: 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
+  # credentials: xxxxxxxxxx replace with token xxxxxx
 ---
 apiVersion: template.crossplane.io/v1alpha1
 kind: ProviderConfig
