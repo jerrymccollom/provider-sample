@@ -5,7 +5,7 @@ metadata:
   name: example-provider-secret
 type: Opaque
 data:
-  # credentials: BASE64ENCODED_PROVIDER_CREDS
+  credentials: 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
 ---
 apiVersion: template.crossplane.io/v1alpha1
 kind: ProviderConfig
