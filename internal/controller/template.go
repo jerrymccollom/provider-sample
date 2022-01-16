@@ -17,7 +17,7 @@ limitations under the License.
 package controller
 
 import (
-	"github.com/jerrymccollom/provider-sample/mytype"
+	"github.com/jerrymccollom/provider-sample/internal/controller/org"
 	"k8s.io/client-go/util/workqueue"
 	ctrl "sigs.k8s.io/controller-runtime"
 
@@ -31,7 +31,8 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, wl workqueue.RateLimiter) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter) error{
 		config.Setup,
-		mytype.Setup,
+		org.Setup,
+		org.SetupM,
 	} {
 		if err := setup(mgr, l, wl); err != nil {
 			return err

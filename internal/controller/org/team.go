@@ -36,9 +36,9 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/jerrymccollom/provider-github/apis/org/v1alpha1"
-	apisv1alpha1 "github.com/jerrymccollom/provider-github/apis/v1alpha1"
-	gitclient "github.com/jerrymccollom/provider-github/internal/client"
+	"github.com/jerrymccollom/provider-sample/apis/org/v1alpha1"
+	apisv1alpha1 "github.com/jerrymccollom/provider-sample/apis/v1alpha1"
+	gitclient "github.com/jerrymccollom/provider-sample/internal/client"
 )
 
 const (

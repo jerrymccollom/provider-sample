@@ -14,13 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package mytype
+package org
 
 import (
 	"context"
 	"fmt"
+	"github.com/google/go-github/v32/github"
 
 	"github.com/pkg/errors"
+	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/util/workqueue"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -33,13 +35,13 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/jerrymccollom/provider-github/apis/org/v1alpha1"
-	apisv1alpha1 "github.com/jerrymccollom/provider-github/apis/v1alpha1"
-	gitclient "github.com/jerrymccollom/provider-github/internal/client"
+	"github.com/jerrymccollom/provider-sample/apis/org/v1alpha1"
+	apisv1alpha1 "github.com/jerrymccollom/provider-sample/apis/v1alpha1"
+	gitclient "github.com/jerrymccollom/provider-sample/internal/client"
 )
 
-// SetupM adds a controller that reconciles MyType managed resources.
-func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
+// SetupM adds a controller that reconciles Membership managed resources.
+func SetupM(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 	name := managed.ControllerName(v1alpha1.MembershipGroupKind)
 
 	o := controller.Options{
