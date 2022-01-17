@@ -1,0 +1,9 @@
+apiVersion: org.github.jerrymccollom.io/v1alpha1
+kind: Team
+metadata:
+  name: crossplane-demo
+spec:
+  forProvider:
+    org: mccolloms-net
+    description: "A handy organization for myself"
+    privacy: closed

@@ -1,18 +1,20 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: compositeuserteams.jerrymccollom.io
+  name: compositeuserteams.github.jerrymccollom.io
 spec:
   claimNames:
     kind: UserTeam
     plural: userteams
-  crdSpecTemplate:
-    group: github.jerrymccollom.io
-    version: v1alpha1
-    names:
-      kind: CompositeUserTeam
-      plural: compositeuserteams
-    validation:
+  group: github.jerrymccollom.io
+  names:
+    kind: CompositeUserTeam
+    plural: compositeuserteams
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
       openAPIV3Schema:
         type: object
         properties:
@@ -26,6 +28,5 @@ spec:
                 type: string
                 description: Name of the user.
             required:
-            - organization
+            - org
             - user
-

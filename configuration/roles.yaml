@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: org.github.jerrymccollom.io
+  labels:
+    rbac.crossplane.io/aggregate-to-crossplane: "true"
+rules:
+- apiGroups:
+  - github.jerrymccollom.io/v1alpha1
+  - org.github.jerrymccollom.io/v1alpha1
+  - github.jerrymccollom.io
+  - org.github.jerrymccollom.io
+  resources:
+  - teams
+  - memberships
+  - userteams
+  - team
+  - membership
+  - userteam
+  verbs:
+  - "*"

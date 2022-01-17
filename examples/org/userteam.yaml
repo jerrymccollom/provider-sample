@@ -1,0 +1,9 @@
+apiVersion: github.jerrymccollom.io/v1alpha1
+kind: UserTeam
+metadata:
+  name: user-team
+  annotations:
+    crossplane.io/external-name: "user-team"
+spec:
+  org: mccolloms-net
+  user: mgudmund

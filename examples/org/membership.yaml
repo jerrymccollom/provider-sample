@@ -1,0 +1,9 @@
+apiVersion: org.github.jerrymccollom.io/v1alpha1
+kind: Membership
+metadata:
+  name: crossplane-membership-demo
+spec:
+  forProvider:
+    org: mccolloms-net
+    team: crossplane-demo
+    user: mgudmund

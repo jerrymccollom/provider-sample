@@ -5,7 +5,6 @@ metadata:
   labels:
     provider: provider-sample
 spec:
-  writeConnectionSecretsToNamespace: crossplane-system
   compositeTypeRef:
     apiVersion: github.jerrymccollom.io/v1alpha1
     kind: CompositeUserTeam
@@ -15,12 +14,12 @@ spec:
         kind: Team
         spec:
           forProvider:
-            org: kubecon-na
+            org: mccolloms-net
             description: "A composed team."
             privacy: secret
       patches:
       - fromFieldPath: "metadata.annotations[crossplane.io/external-name]"
-        toFieldPath: "metadata.annotations[crossplane.io/external-name]"
+        toFieldPath: "metadata.name"
       - fromFieldPath: "spec.org"
         toFieldPath: "spec.forProvider.org"
     - base:
@@ -28,11 +27,13 @@ spec:
         kind: Membership
         spec:
           forProvider:
-            org: kubecon-na
+            org: mccolloms-net
             teamSelector:
               matchControllerRef: true
             user: jerrymccollom
       patches:
+      - fromFieldPath: "metadata.annotations[crossplane.io/external-name]"
+        toFieldPath: "metadata.name"
       - fromFieldPath: "metadata.annotations[crossplane.io/external-name]"
         toFieldPath: "spec.forProvider.team"
       - fromFieldPath: "spec.org"
